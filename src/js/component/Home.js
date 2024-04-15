@@ -23,7 +23,7 @@ const Home = () => {
 					className={"greenLight" + (selectedColor === "green" ? " glow" : "")}></div>
 			</div>
 			<button
-				onClick={() => setSelecterColor(color[colorIndex])}
+				onClick={addEventListener("click", () => setSelecterColor(color[colorIndex]))}
 				className="btn btn-outline-secondary btn-sm mt-5">Random Color!</button>
 		</div >
 	);
