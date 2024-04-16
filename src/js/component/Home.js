@@ -5,7 +5,6 @@ const Home = () => {
 
 	const [selectedColor, setSelecterColor] = useState("red");
 	let color = ["red", "yellow", "green"];
-	let colorIndex = Math.floor(Math.random() * color.length);
 
 	return (
 
@@ -23,7 +22,9 @@ const Home = () => {
 					className={"greenLight" + (selectedColor === "green" ? " glow" : "")}></div>
 			</div>
 			<button
-				onClick={addEventListener("click", () => setSelecterColor(color[colorIndex]))}
+				onClick={() => {
+					let colorIndex = Math.floor(Math.random() * color.length);
+					setSelecterColor(color[colorIndex])}}
 				className="btn btn-outline-secondary btn-sm mt-5">Random Color!</button>
 		</div >
 	);
